@@ -5,34 +5,34 @@ import { Testimonial } from "@/types/testimonial";
 export const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Devid Smith",
-    designation: "Founter @democompany",
+    name: "Deva Pratama",
+    designation: "customer",
     image: image1,
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.",
+      "BRIVIXEL memberikan hasil yang luar biasa untuk branding perusahaan kami. Sangat puas dengan kreativitas dan profesionalisme mereka.",
   },
   {
     id: 2,
-    name: "Jhon Abraham",
-    designation: "Founter @democompany",
+    name: "Sari Wulandari",
+    designation: "customer",
     image: image2,
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.",
+      "Layanan desain grafis dari BRIVIXEL sangat membantu kami dalam membuat konten media sosial yang menarik dan efektif.",
   },
   {
     id: 3,
-    name: "Devid Smith",
-    designation: "Founter @democompany",
+    name: "Arief Nugroho",
+    designation: "customer",
     image: image1,
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.",
+      "Pengalaman bekerja dengan BRIVIXEL sangat memuaskan. Mereka mengerti apa yang kami butuhkan dan memberikan hasil yang melebihi ekspektasi.",
   },
   {
     id: 4,
-    name: "Jhon Abraham",
-    designation: "Founter @democompany",
+    name: "Putri Ayu",
+    designation: "customer",
     image: image2,
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.",
+      "Desain yang dikerjakan oleh BRIVIXEL sangat menarik dan mampu menarik perhatian target pasar kami.",
   },
 ];

@@ -4,44 +4,37 @@ const BlogData: Blog[] = [
   {
     _id: 1,
     mainImage: "/images/blog/blog-01.png",
-    title: "Free advertising for your online business",
+    title: "Tipografi Desain untuk Efisiensi Bisnis yang Lebih Tinggi",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "Cari tahu bagaimana tipografi desain yang optimal dapat mendukung citra dan pertumbuhan bisnis Anda.",
   },
   {
     _id: 2,
     mainImage: "/images/blog/blog-02.png",
-    title: "9 simple ways to improve your design skills",
+    title: "Tips Meningkatkan Branding dengan Desain Logo",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "Logo yang tepat mampu membedakan bisnis Anda dari kompetitor. Berikut beberapa tips desain logo yang efektif.",
   },
   {
-    _id: 2,
+    _id: 3,
     mainImage: "/images/blog/blog-03.png",
-    title: "Tips to quickly improve your coding speed.",
+    title: "Desain Kemasan yang Menarik untuk Produk Anda",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "Desain kemasan yang kreatif dapat menarik perhatian konsumen dan meningkatkan penjualan produk Anda.",
   },
   {
-    _id: 1,
-    mainImage: "/images/blog/blog-03.png",
-    title: "Free advertising for your online business",
-    metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
-  },
-  {
-    _id: 2,
+    _id: 4,
     mainImage: "/images/blog/blog-04.png",
-    title: "9 simple ways to improve your design skills",
+    title: "Mengoptimalkan Media Sosial dengan Desain Grafis",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "Temukan cara menggunakan desain grafis untuk menarik perhatian di platform media sosial.",
   },
   {
-    _id: 2,
-    mainImage: "/images/blog/blog-01.png",
-    title: "Tips to quickly improve your coding speed.",
+    _id: 5,
+    mainImage: "/images/blog/blog-05.png",
+    title: "Alasan Pentingnya Desain Grafis Berkualitas Tinggi",
     metadata:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+      "Desain grafis yang berkualitas dapat membangun kepercayaan konsumen terhadap brand Anda.",
   },
 ];
 

@@ -1,47 +1,48 @@
+import { FaLaptop, FaMobileAlt, FaTabletAlt, FaMousePointer, FaKeyboard, FaDesktop } from "react-icons/fa"; // Ikon dari react-icons
 import { Brand } from "@/types/brand";
 
 const brandData: Brand[] = [
   {
     id: 0.25,
-    name: "Client",
+    name: "Laptop Designer",
     href: "#",
-    image: "/images/brand/brand-light-01.svg",
-    imageLight: "/images/brand/brand-dark-01.svg",
+    image: <FaLaptop />, // Ikon Laptop
+    imageLight: <FaLaptop />,
   },
   {
     id: 0.3,
-    name: "Client",
+    name: "Mobile Designer",
     href: "#",
-    image: "/images/brand/brand-light-02.svg",
-    imageLight: "/images/brand/brand-dark-02.svg",
+    image: <FaMobileAlt />, // Ikon HP (Mobile)
+    imageLight: <FaMobileAlt />,
   },
   {
     id: 0.4,
-    name: "Client",
+    name: "Tablet Designer",
     href: "#",
-    image: "/images/brand/brand-light-03.svg",
-    imageLight: "/images/brand/brand-dark-03.svg",
+    image: <FaTabletAlt />, // Ikon Tablet
+    imageLight: <FaTabletAlt />,
   },
   {
     id: 0.5,
-    name: "Client",
+    name: "Pointer Expert",
     href: "#",
-    image: "/images/brand/brand-light-04.svg",
-    imageLight: "/images/brand/brand-dark-04.svg",
+    image: <FaMousePointer />, // Ikon Pointer
+    imageLight: <FaMousePointer />,
   },
   {
     id: 0.6,
-    name: "Client",
+    name: "Keyboard Designer",
     href: "#",
-    image: "/images/brand/brand-light-05.svg",
-    imageLight: "/images/brand/brand-dark-05.svg",
+    image: <FaKeyboard />, // Ikon Keyboard
+    imageLight: <FaKeyboard />,
   },
   {
     id: 0.7,
-    name: "Client",
+    name: "Desktop Designer",
     href: "#",
-    image: "/images/brand/brand-light-06.svg",
-    imageLight: "/images/brand/brand-dark-06.svg",
+    image: <FaDesktop />, // Ikon Desktop
+    imageLight: <FaDesktop />,
   },
 ];
 

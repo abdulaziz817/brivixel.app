@@ -2,8 +2,8 @@ import SidebarLink from "@/components/Docs/SidebarLink";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Docs Page - Solid SaaS Boilerplate",
-  description: "This is Docs page for Solid Pro",
+  title: "BRIXEL - Jasa Desain Grafis",
+  description: "BRIXEL menawarkan jasa desain grafis berkualitas untuk bisnis dan individu.",
   // other metadata
 };
 
@@ -14,7 +14,7 @@ export default function DocsPage() {
         <div className="container mx-auto">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-1/4">
-              <div className="sticky top-[74px] rounded-lg border border-white p-4 shadow-solid-4  transition-all  dark:border-strokedark dark:bg-blacksection">
+              <div className="sticky top-[74px] rounded-lg border border-white p-4 shadow-solid-4 transition-all dark:border-strokedark dark:bg-blacksection">
                 <ul className="space-y-2">
                   <SidebarLink />
                 </ul>
@@ -23,22 +23,33 @@ export default function DocsPage() {
 
             <div className="w-full px-4 lg:w-3/4">
               <div className="blog-details blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
-                <h1>Welcome to Startup Documentation</h1>
+                <h1>Selamat Datang di BRIVIXEL - Jasa Layanan Desain Grafis</h1>
 
                 <p className="text-body-color dark:text-body-color-dark text-base">
-                  This document serves as a simple template to showcase a sample
-                  layout and format. It is solely created for demonstration
-                  purposes and is not intended for any official use.
+                BRIVIXEL menawarkan berbagai layanan desain grafis yang disesuaikan dengan kebutuhan bisnis Anda. Baik Anda mencari branding, grafik media sosial, atau desain cetak, kami membawa kreativitas dan profesionalisme ke setiap proyek.
                 </p>
+
                 <p className="text-body-color dark:text-body-color-dark text-base">
-                  Please visit:{" "}
+                  Layanan kami meliputi:
+                </p>
+
+                <ul className="list-disc ml-6 text-body-color dark:text-body-color-dark text-base">
+                  <li>Desain Branding dan Logo</li>
+                  <li>Grafik Media Sosial</li>
+                  <li>Brosur dan Flyer</li>
+                  <li>Kartu Nama dan Stiker</li>
+                  <li>Desain Kemasan</li>
+                  <li>Dan masih banyak lagi!</li>
+                </ul>
+
+                <p className="text-body-color dark:text-body-color-dark text-base">
+                  Tanyakan:{" "}
                   <b>
-                    <a href="https://nextjstemplates.com/docs">
-                      nextjstemplates.com/docs
+                    <a href="https://www.instagram.com/zizzz.dul_/">
+                      Langsung
                     </a>
                   </b>{" "}
-                  to check out the real docs, setup guide and even video
-                  instructions
+                  untuk mempelajari lebih lanjut tentang layanan kami dan bagaimana kami dapat membantu bisnis Anda tampil menonjol.
                 </p>
               </div>
             </div>

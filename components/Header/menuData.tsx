@@ -1,15 +1,15 @@
 import { Menu } from "@/types/menu";
 
-const menuData: Menu[] = [
+const dataMenu: Menu[] = [
   {
     id: 1,
-    title: "Home",
+    title: "Beranda",
     newTab: false,
     path: "/",
   },
   {
     id: 2,
-    title: "Features",
+    title: "Keunggulan",
     newTab: false,
     path: "/#features",
   },
@@ -21,42 +21,30 @@ const menuData: Menu[] = [
   },
   {
     id: 2.3,
-    title: "Docs",
+    title: "Dokumen",
     newTab: false,
     path: "/docs",
   },
   {
     id: 3,
-    title: "Pages",
+    title: "Halaman",
     newTab: false,
     submenu: [
       {
         id: 31,
-        title: "Blog Grid",
+        title: "Profil",
         newTab: false,
-        path: "/blog",
-      },
-      {
-        id: 34,
-        title: "Sign In",
-        newTab: false,
-        path: "/auth/signin",
+        path: "/akun",
       },
       {
         id: 35,
-        title: "Sign Up",
-        newTab: false,
-        path: "/auth/signup",
-      },
-      {
-        id: 35,
-        title: "Docs",
+        title: "Dokumen",
         newTab: false,
         path: "/docs",
       },
       {
         id: 35.1,
-        title: "Support",
+        title: "Dukungan",
         newTab: false,
         path: "/support",
       },
@@ -71,10 +59,10 @@ const menuData: Menu[] = [
 
   {
     id: 4,
-    title: "Support",
+    title: "Dukungan",
     newTab: false,
     path: "/support",
   },
 ];
 
-export default menuData;
+export default dataMenu;

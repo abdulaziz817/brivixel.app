@@ -1,9 +1,9 @@
 export default function Head() {
   return (
     <>
-      <title> Solid | Next.js Template for Startup and SaaS</title>
+      <title>Brivixel | Layanan Jasa Desain Grafis </title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <meta name="description" content="Built with Next.js and TypeScript" />
+      <meta name="description" content="BRIVIXEL menyediakan jasa desain grafis berkualitas untuk kebutuhan bisnis dan individu." />
       <link rel="icon" href="/images/favicon.ico" />
     </>
   );
