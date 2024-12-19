@@ -2,13 +2,38 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import jsPDF from "jspdf";
 
 const Contact = () => {
-  /**
-   * Source: https://www.joshwcomeau.com/react/the-perils-of-rehydration/
-   * Reason: To fix rehydration error
-   */
   const [hasMounted, setHasMounted] = React.useState(false);
+
+  // Fungsi untuk mengunduh PDF dan mengirim pesan ke WhatsApp
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Ambil data dari form
+    const fullName = e.target.fullName.value;
+    const email = e.target.email.value;
+    const subject = e.target.subject.value;
+    const phoneNumber = e.target.phoneNumber.value;
+    const message = e.target.message.value;
+
+    // Buat PDF dengan jsPDF
+    const doc = new jsPDF();
+    doc.text(`Full Name: ${fullName}`, 10, 10);
+    doc.text(`Email: ${email}`, 10, 20);
+    doc.text(`Subject: ${subject}`, 10, 30);
+    doc.text(`Phone Number: ${phoneNumber}`, 10, 40);
+    doc.text(`Message: ${message}`, 10, 50);
+
+    // Unduh PDF
+    doc.save("form-data.pdf");
+
+    // Kirim pesan ke WhatsApp
+    const waMessage = `Nama: ${fullName}%0AEmail: ${email}%0ASubjek: ${subject}%0ANo HP: ${phoneNumber}%0APesan: ${message}`;
+    window.open(`https://wa.me/6287782535212?text=${waMessage}`, "_blank");
+  };
+
   React.useEffect(() => {
     setHasMounted(true);
   }, []);
@@ -57,46 +82,53 @@ const Contact = () => {
               className="animate_top w-full rounded-lg bg-white p-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-black md:w-3/5 lg:w-3/4 xl:p-15"
             >
               <h2 className="mb-15 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
-                Send a message
+                Kirim Pesan
               </h2>
 
-              <form
-                action="https://formbold.com/s/unique_form_id"
-                method="POST"
-              >
+              <form onSubmit={handleSubmit}>
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
-                    placeholder="Full name"
+                    name="fullName"
+                    placeholder="Nama Lengkap"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
                   />
 
                   <input
                     type="email"
-                    placeholder="Email address"
+                    name="email"
+                    placeholder="Alamat Email"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
                   />
                 </div>
 
                 <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
-                    placeholder="Subject"
+                    name="subject"
+                    placeholder="Subjek"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
                   />
 
                   <input
                     type="text"
-                    placeholder="Phone number"
+                    name="phoneNumber"
+                    placeholder="Nomor HP"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
                   />
                 </div>
 
                 <div className="mb-11.5 flex">
                   <textarea
-                    placeholder="Message"
+                    name="message"
+                    placeholder="Pesan"
                     rows={4}
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
+                    required
                   ></textarea>
                 </div>
 
@@ -106,8 +138,9 @@ const Contact = () => {
                       id="default-checkbox"
                       type="checkbox"
                       className="peer sr-only"
+                      required
                     />
-                    <span className="border-gray-300 bg-gray-100 text-blue-600 dark:border-gray-600 dark:bg-gray-700 group mt-2 flex h-5 min-w-[20px] items-center justify-center rounded peer-checked:bg-primary">
+                    <span className="group mt-2 flex h-5 min-w-[20px] items-center justify-center rounded border-gray-300 bg-gray-100 text-blue-600 peer-checked:bg-primary dark:border-gray-600 dark:bg-gray-700">
                       <svg
                         className="opacity-0 peer-checked:group-[]:opacity-100"
                         width="10"
@@ -128,16 +161,17 @@ const Contact = () => {
                       htmlFor="default-checkbox"
                       className="flex max-w-[425px] cursor-pointer select-none pl-5"
                     >
-                      By clicking Checkbox, you agree to use our “Form” terms
-                      And consent cookie usage in browser.
+                      Dengan mengirimkan pesan, Anda setuju dengan syarat dan
+                      ketentuan kami.
                     </label>
                   </div>
 
                   <button
-                    aria-label="send message"
+                    aria-label="kirim pesan"
+                    type="submit"
                     className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark"
                   >
-                    Send Message
+                    Kirim Pesan
                     <svg
                       className="fill-white"
                       width="14"
@@ -155,49 +189,51 @@ const Contact = () => {
                 </div>
               </form>
             </motion.div>
-
             <motion.div
               variants={{
-                hidden: {
-                  opacity: 0,
-                  y: -20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                },
+                hidden: { opacity: 0, y: -50 },
+                visible: { opacity: 1, y: 0 },
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 2, delay: 0.1 }}
+              transition={{ duration: 3, delay: 0.2 }}
               viewport={{ once: true }}
               className="animate_top w-full md:w-2/5 md:p-7.5 lg:w-[26%] xl:pt-15"
             >
               <h2 className="mb-12.5 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
-                Find us
+                Temukan Kami
               </h2>
 
               <div className="5 mb-7">
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Our Loaction
+                  Lokasi Kami
                 </h3>
-                <p>290 Maryam Springs 260, Courbevoie, Paris, France</p>
+                <p>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Cikampek+Timur"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Jl. Ir. Haji Juanda, Cikampek Timur, Kec. Cikampek, Karawang, Jawa Barat 41373
+                  </a>
+                </p>
               </div>
               <div className="5 mb-7">
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Email Address
+                  Alamat Email
                 </h3>
                 <p>
-                  <a href="#">yourmail@domainname.com</a>
+                  <a href="mailto:zizzzdul817@gmail.com">zizzzdul817@gmail.com</a>
                 </p>
               </div>
               <div>
                 <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Phone Number
+                  Nomor Telepon
                 </h4>
                 <p>
-                  <a href="#">+009 42334 6343 843</a>
+                  <a href="https://wa.me/6287782535212" target="_blank" rel="noopener noreferrer">
+                    +62-877-8253-5212
+                  </a>
                 </p>
               </div>
             </motion.div>
