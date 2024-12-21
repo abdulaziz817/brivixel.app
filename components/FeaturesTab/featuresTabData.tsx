@@ -1,29 +1,27 @@
 import { FeatureTab } from "@/types/featureTab";
+import { FaPaintBrush, FaClipboardCheck, FaCogs } from "react-icons/fa"; // Example icons from react-icons
 
 const featuresTabData: FeatureTab[] = [
   {
     id: "tabOne",
-    title: "Solid Has Neat & Clean User Interface.",
-    desc1: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.`,
-    desc2: `    Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.`,
-    image: "/images/features/features-light-01.png",
-    imageDark: "/images/features/features-dark-01.svg",
+    title: "Kreatif",
+    desc1: `Kreativitas dalam desain adalah kunci untuk menarik perhatian dan memberikan pengalaman yang unik. Kami menghadirkan solusi desain yang segar dan inovatif.`,
+    desc2: `Setiap proyek mencerminkan pemikiran kreatif dan pendekatan yang disesuaikan untuk memenuhi kebutuhan klien.`,
+    icon: <FaPaintBrush className="h-24 w-24" />, // Icon for Kreatif
   },
   {
     id: "tabTwo",
-    title: "Ready to Use Pages You Need for a SaaS Business.",
-    desc1: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.`,
-    desc2: `    Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.`,
-    image: "/images/features/features-light-01.png",
-    imageDark: "/images/features/features-dark-01.svg",
+    title: "Profesional",
+    desc1: `Desain yang profesional menciptakan kesan yang kuat dan membangun kepercayaan. Kami fokus pada kualitas dan detail untuk setiap elemen desain.`,
+    desc2: `Pendekatan kami memastikan bahwa setiap proyek tidak hanya terlihat hebat, tetapi juga memenuhi standar industri yang tinggi.`,
+    icon: <FaClipboardCheck className="h-24 w-24" />, // Icon for Profesional
   },
   {
     id: "tabThree",
-    title: "Functional Blog, DB, Auth and Many More",
-    desc1: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.`,
-    desc2: `Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.`,
-    image: "/images/features/features-light-01.png",
-    imageDark: "/images/features/features-dark-01.svg",
+    title: "Custom",
+    desc1: `Kami menawarkan solusi desain yang sepenuhnya disesuaikan dengan kebutuhan klien. Setiap proyek dirancang untuk mencerminkan identitas dan nilai unik merek Anda.`,
+    desc2: `Desain kustom memastikan bahwa produk akhir tidak hanya fungsional tetapi juga menciptakan koneksi yang mendalam dengan audiens target.`,
+    icon: <FaCogs className="h-24 w-24" />, // Icon for Custom
   },
 ];
 

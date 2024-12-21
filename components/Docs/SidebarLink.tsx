@@ -1,34 +1,68 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation"; // Import usePathname to detect current path
 
 const SidebarLink = () => {
+  const pathname = usePathname(); // Get the current path
+
   return (
     <>
       <li className="block">
-        <Link
+      <Link
           href={`/docs`}
-          className={`flex w-full rounded-sm bg-stroke px-3 py-2 text-base text-black dark:bg-blackho dark:text-white`}
+          className={`flex w-full rounded-sm px-3 py-2 text-base ${
+            pathname === "/docs"
+              ? "bg-stroke text-black dark:bg-blackho dark:text-white"
+              : "text-black dark:text-white"
+          }`}
         >
-          Introduction
+          Pengantar
         </Link>
+      <Link
+          href={`/docs/Event`}
+          className={`flex w-full rounded-sm px-3 py-2 text-base ${
+            pathname === "/docs/Event"
+              ? "bg-stroke text-black dark:bg-blackho dark:text-white"
+              : "text-black dark:text-white"
+          }`}
+        >
+          Event Harian Brivixel
+        </Link>
+      <Link
+          href={`/docs/reward`}
+          className={`flex w-full rounded-sm px-3 py-2 text-base ${
+            pathname === "/docs/reward"
+              ? "bg-stroke text-black dark:bg-blackho dark:text-white"
+              : "text-black dark:text-white"
+          }`}
+        >
+          Dapatkan Reward dari kami
+        </Link>
+
+      
         <Link
-          href={`/docs`}
-          className={`flex w-full rounded-sm px-3 py-2 text-base text-black dark:text-white `}
+          href={`/docs/branding`}
+          className={`flex w-full rounded-sm px-3 py-2 text-base ${
+            pathname === "/docs/branding"
+              ? "bg-stroke text-black dark:bg-blackho dark:text-white"
+              : "text-black dark:text-white"
+          }`}
         >
-          Bootstrap Template Guide
+          Update 
         </Link>
+
         <Link
-          href={`/docs`}
-          className={`flex w-full rounded-sm px-3 py-2 text-base text-black dark:text-white `}
+          href={`/docs/chatbot`}
+          className={`flex w-full rounded-sm px-3 py-2 text-base ${
+            pathname === "/docs/chatbot"
+              ? "bg-stroke text-black dark:bg-blackho dark:text-white"
+              : "text-black dark:text-white"
+          }`}
         >
-          Style Guide
+          Tanya AI 
         </Link>
-        <Link
-          href={`/docs`}
-          className={`flex w-full rounded-sm px-3 py-2 text-base text-black dark:text-white `}
-        >
-          Using Tailwind Components
-        </Link>
+        
+        
       </li>
     </>
   );

@@ -2,9 +2,8 @@ import SidebarLink from "@/components/Docs/SidebarLink";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "BRIXEL - Jasa Desain Grafis",
-  description: "BRIXEL menawarkan jasa desain grafis berkualitas untuk bisnis dan individu.",
-  // other metadata
+  title: "BRIVIXEL - Tanya AI",
+  description: "Halaman AI Brivixel untuk bertanya apa saja melalui tautan yang tersedia.",
 };
 
 export default function DocsPage() {
@@ -23,33 +22,31 @@ export default function DocsPage() {
 
             <div className="w-full px-4 lg:w-3/4">
               <div className="blog-details blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
-                <h1>Selamat Datang di BRIVIXEL - Jasa Layanan Desain Grafis</h1>
+                <h1>Halaman AI Brivixel</h1>
 
                 <p className="text-body-color dark:text-body-color-dark text-base">
-                BRIVIXEL menawarkan berbagai layanan desain grafis yang disesuaikan dengan kebutuhan bisnis Anda. Baik Anda mencari branding, grafik media sosial, atau desain cetak, kami membawa kreativitas dan profesionalisme ke setiap proyek.
-                </p>
-
-                <p className="text-body-color dark:text-body-color-dark text-base">
-                  Layanan kami meliputi:
+                  Selamat datang di halaman AI Brivixel! Anda dapat bertanya apa saja kepada AI kami melalui tautan di bawah ini:
                 </p>
 
                 <ul className="list-disc ml-6 text-body-color dark:text-body-color-dark text-base">
-                  <li>Desain Branding dan Logo</li>
-                  <li>Grafik Media Sosial</li>
-                  <li>Brosur dan Flyer</li>
-                  <li>Kartu Nama dan Alat Tulis</li>
-                  <li>Desain Kemasan</li>
-                  <li>Dan masih banyak lagi!</li>
+                  <li>
+                    <b>Tanya AI:</b> Klik pada tautan berikut untuk mengakses halaman Tanya AI Brivixel:
+                    {" "}
+                    <a href="https://84b0709059baa9ee98.gradio.live" className="text-primary hover:underline">
+                      Halaman Tanya AI
+                    </a>.
+                  </li>
+                  <li>
+                    <b>Bantuan Teknis:</b> Jika membutuhkan bantuan lebih lanjut, Anda dapat menghubungi kami melalui:
+                    {" "}
+                    <a href="https://brixel.com/contact" className="text-primary hover:underline">
+                      halaman kontak kami
+                    </a>.
+                  </li>
                 </ul>
 
                 <p className="text-body-color dark:text-body-color-dark text-base">
-                  Kunjungi:{" "}
-                  <b>
-                    <a href="https://brixel.com/services">
-                      brixel.com/services
-                    </a>
-                  </b>{" "}
-                  untuk mempelajari lebih lanjut tentang layanan kami dan bagaimana kami dapat membantu bisnis Anda tampil menonjol.
+                  AI Brivixel dirancang untuk membantu menjawab berbagai pertanyaan Anda, mulai dari teknologi hingga desain. Jangan ragu untuk mencoba dan eksplorasi!
                 </p>
               </div>
             </div>
