@@ -37,16 +37,16 @@ export default function DocsPage() {
                   <li>Desain Branding dan Logo</li>
                   <li>Grafik Media Sosial</li>
                   <li>Brosur dan Flyer</li>
-                  <li>Kartu Nama dan Alat Tulis</li>
+                  <li>Kartu Nama dan Stiker</li>
                   <li>Desain Kemasan</li>
                   <li>Dan masih banyak lagi!</li>
                 </ul>
 
                 <p className="text-body-color dark:text-body-color-dark text-base">
-                  Kunjungi:{" "}
+                  Tanyakan:{" "}
                   <b>
-                    <a href="https://brixel.com/services">
-                      brixel.com/services
+                    <a href="https://www.instagram.com/zizzz.dul_/">
+                      Langsung
                     </a>
                   </b>{" "}
                   untuk mempelajari lebih lanjut tentang layanan kami dan bagaimana kami dapat membantu bisnis Anda tampil menonjol.
